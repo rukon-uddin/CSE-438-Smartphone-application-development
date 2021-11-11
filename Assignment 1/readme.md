@@ -1,5 +1,11 @@
 # Assignment 1
 ## The assignment was to design the following layouts
+### The following folders contains the android project files
+- Login Panel
+- cardview
+- Healthscore
+- PaymentGate
+- Signup Panel
 
 <table>
   <th>
