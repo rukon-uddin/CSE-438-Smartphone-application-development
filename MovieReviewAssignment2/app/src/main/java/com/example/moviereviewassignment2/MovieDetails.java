@@ -29,7 +29,7 @@ import okhttp3.Response;
 public class MovieDetails extends AppCompatActivity {
 
     MovieCast movieCast;
-    String backdrop_path, poster_path, overview, title, rating;
+    String backdrop_path, poster_path, overview, title, rating, releaseDate;
 
     OkHttpClient client = new OkHttpClient();
 
@@ -50,7 +50,7 @@ public class MovieDetails extends AppCompatActivity {
         setContentView(R.layout.activity_movie_details);
 
         ImageView moviePosterIV, moviebackDropIV;
-        TextView movieTitleTV, movieOverviewTV, movieRatingTV;
+        TextView movieTitleTV, movieOverviewTV, movieRatingTV, releaseDateTV;
         RatingBar ratingBar;
 
         Bundle extras = getIntent().getExtras();
@@ -60,6 +60,7 @@ public class MovieDetails extends AppCompatActivity {
         poster_path = extras.getString("posterPath");
         backdrop_path = extras.getString("backdropPath");
         rating = extras.getString("rating");
+        releaseDate = extras.getString("releaseDate");
 
         moviePosterIV = findViewById(R.id.moviePosterIV);
         moviebackDropIV = findViewById(R.id.movieBackDropIV);
@@ -67,11 +68,13 @@ public class MovieDetails extends AppCompatActivity {
         movieOverviewTV = findViewById(R.id.overviewTV);
         movieRatingTV = findViewById(R.id.ratingTV);
         ratingBar = findViewById(R.id.ratingBarRB);
+        releaseDateTV = findViewById(R.id.releaseDateTV);
 
 
         movieTitleTV.setText(title);
         movieOverviewTV.setText(overview);
         movieRatingTV.setText(rating);
+        releaseDateTV.setText(releaseDate);
         float rating_cal = (float) ((Float.parseFloat(rating) / 2));
 
         ratingBar.setRating(rating_cal);

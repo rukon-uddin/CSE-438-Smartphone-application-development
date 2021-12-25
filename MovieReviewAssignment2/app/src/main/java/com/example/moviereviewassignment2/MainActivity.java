@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("posterPath", decode.getResults().get(k).getPosterPath());
                     intent.putExtra("backdropPath", decode.getResults().get(k).getBackdropPath());
                     intent.putExtra("rating", String.valueOf(decode.getResults().get(k).getVoteAverage()));
+                    intent.putExtra("releaseDate", decode.getResults().get(k).getReleaseDate());
                     startActivity(intent);
                 }
             });

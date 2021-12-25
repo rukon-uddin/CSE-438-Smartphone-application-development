@@ -87,36 +87,56 @@
             app:layout_constraintTop_toBottomOf="@+id/moviePosterIV"
             app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/ratingTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="10"
-            android:textSize="20dp"
-            android:textColor="#d6182a"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.478"
-            app:layout_constraintStart_toEndOf="@+id/moviePosterIV"
-            app:layout_constraintTop_toBottomOf="@+id/movieBackDropIV" />
 
-        <RatingBar
-            android:id="@+id/ratingBarRB"
-            style="?android:attr/ratingBarStyleIndicator"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="175dp"
-            android:layout_marginEnd="36dp"
-            android:isIndicator="true"
-            android:numStars="5"
-            android:rating="5"
-            android:stepSize="0.1"
-            android:theme="@style/RatingBar"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginStart="150dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/moviePosterIV"
-            app:layout_constraintTop_toBottomOf="@+id/ratingTV" />
+            app:layout_constraintStart_toStartOf="@+id/movieTitleTV"
+            app:layout_constraintTop_toBottomOf="@+id/movieTitleTV">
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/ratingTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="#d6182a"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <RatingBar
+                android:id="@+id/ratingBarRB"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="79dp"
+                android:layout_height="16dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="5"
+                android:stepSize="0.1"
+                android:theme="@style/RatingBar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Release Date:"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/releaseDateTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25-12-2021"
+                android:textColor="#02aeb7"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
